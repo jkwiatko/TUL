@@ -1,0 +1,1 @@
+# Systemy czasu rzeczywistego - QNX Linux

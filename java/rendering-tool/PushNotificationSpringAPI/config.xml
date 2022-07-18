@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="PathToEmulatorExe">C:\Users\anwyr1\AppData\Local\Android\Sdk\tools\emulator.exe</entry>
+    <entry key="PathToAdbExe">C:\Users\anwyr1\AppData\Local\Android\Sdk\platform-tools\adb.exe</entry>
+    <entry key="DefaultDeviceName">Pixel_API_25</entry>
+    <entry key="AppName">app-debug.apk</entry>
+    <entry key="ActivityName">com.example.messagerenderingtool/com.example.messagerenderingtool.MainActivity</entry>
+    <entry key="MinPortNumber">5555</entry>
+    <entry key="RunAppBat">src/main/bat/start.bat</entry>
+    <entry key="InstallAppBat">src/main/bat/install.bat</entry>
+    <entry key="PowerOnEmulatorBat">src/main/bat/emulator.bat</entry>
+    <entry key="EmulatorsNumber">1</entry>
+    <entry key="Emulator0">Pixel_API_25</entry>
+    <entry key="Emulator1">Pixel_XL_API_27</entry>
+    <!-- FTP config -->
+    <entry key="Login">ania</entry>
+    <entry key="Password">Silnehaslo1#@</entry>
+    <entry key="Server">aniatest.hekko24.pl</entry>
+    <entry key="Directory">/public_html/screens/</entry>
+</properties>

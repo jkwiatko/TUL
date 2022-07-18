@@ -1,0 +1,33 @@
+pjaszyczk@dmcs.pl
+Piotr Jaszczyk
+godziny przyjec w poniedzialki o 15:45
+(umawiac sie mailowo)
+materialy oczywiscie neo.dmcs.pl
+pai-14 sessemem
+	
+	Zalozenia przedmiotu:
+		-> w trakcie laboratorium bedzie 5 zadan do zaliczenia
+		ktore umozliwiaja podejscie do projektu z ktorego jest 
+		ocena koncowa.
+
+	Co jest potrzebne:
+	Java
+	Netbens
+
+1. uwaga na sposob zliaczania czasu (nie taki sam dla dwoch)
+pliki tekstowe po 15tysiecy linijek 5 plikow
+
+2. regex, parametry polaczenia, strony z domena inna 
+niz standartowa, walidacja... a chodzi o wpisanie kazdej strony
+nalezy pobierac strony pobierane przez protokol http i https
+
+3. echo klient, echo server. Piszemy sobie server, i wysylamy do niego wiadomosc, a on odpowiada nam ta sama wiadomoscia.
+W teorii nieograniczona ilosc klientow. (wielowatkowy serwer)
+
+4.	Bank czasu, menu! DODANIE USLUGI(wpisuje sobie usluga jeden)domyslnie jestem przypisany do tej uslugi(jako wlasciciel) i okreslam ja czasowo, inna osoba moze ja zarezerwowac (te usluge), SPRAWDZANIE uslug do rezerwacji, USUWANIE moga usuwac tylko wlasne uslugi, ODREZERWOWAC uslugi ktore zarezerwowali. !Zadanie bedzie sprawdzane pod katem bledow szczegolowo!
+
+5. ...
+
+PROJEKT:
+	gra internetowa, komunikacja zawsze za posrednictwem serwera, konfiguracja serwera wczytywana z xmla przy starcie, testy jednostkowe, zrobic test
+	s

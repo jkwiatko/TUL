@@ -1,0 +1,61 @@
+.clr{
+    clear: both;
+}
+
+.jumbotron{
+    padding: 10px;
+}
+
+.list{
+    list-style: none;
+    margin-top: 15px; 
+}
+
+.list a{
+    text-decoration: none;
+    color: gray;
+}
+
+.list a:hover{
+    color: #4f4f4f;
+}
+
+.list a:active{
+    color:#93ffd5;
+}
+
+#main-footer{
+    text-align: center;
+    padding: 20px;
+    margin: 100px;   
+}
+
+/* 
++-+-+-+-+
+|H|o|m|e|
++-+-+-+-+
+ */
+.homePostNavbar{
+    margin-bottom: 20px;
+}
+
+.homePostNavbar a{
+    float: left;
+}
+
+.homePostNavbar .searchPanel{
+    float: right;
+}
+
+.homePostNavbar .searchPanel input[type="text"]{
+    padding: 10px;
+}
+
+.homePostNavbar .searchPanel input[type="checkbox"]{
+    margin: 15px;
+}
+
+
+.homeHeader{
+    text-align: center
+}

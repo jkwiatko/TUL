@@ -1,0 +1,1 @@
+# Techniczny indykator ADX

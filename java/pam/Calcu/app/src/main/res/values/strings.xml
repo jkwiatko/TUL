@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Calcu</string>
+    <string name="author">Author: Jakub Kwiatkowski</string>
+    <string name="version">1.0</string>
+    <string name="title">Calculator</string>
+    <string name="simple_button">Simple</string>
+    <string name="advanced_button">Advanced</string>
+    <string name="about_button">About</string>
+    <string name="exit_button">Exit</string>
+    <string name="ce">C/CE</string>
+    <string name="ac">AC</string>
+    <string name="plus_minus">±</string>
+    <string name="divide">÷</string>
+    <string name="multiply">*</string>
+    <string name="percentage">%</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <string name="count">=</string>
+    <string name="dot">.</string>
+    <string name="zero">0</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="sine">sin</string>
+    <string name="cosine">cos</string>
+    <string name="tangent">tan</string>
+    <string name="logarithm">log</string>
+    <string name="natural_logarithm">ln</string>
+    <string name="sqrt">sqrt</string>
+    <string name="square">X^2</string>
+    <string name="pow">X^Y</string>
+</resources>

@@ -1,0 +1,20 @@
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+<div>
+    <img src="~/images/titleImg.jpg" style="width: 100%"/>
+    <div class="newlayoutlink" style="text-align: center;">
+        <a asp-page="/Index">Films</a>
+        <span class="newlayoutlink_kreska">/</span>
+        @if (SignInManager.IsSignedIn(User))
+        {
+            <form class="not-button-from" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/Index", new { area = "" })" method="post" >
+                <button type="submit">Logout</button>
+            </form>
+        }
+        else
+        {
+            <a asp-area="Identity" asp-page="/Account/Login">Login</a>    
+        }
+    </div>
+</div>

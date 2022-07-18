@@ -1,0 +1,26 @@
+cd->go to directory
+~/->home
+gcc Program.c->kompilowanie
+./a.out->odpalanie
+$ valgrind ./a.out
+$ gcc -Wall -pedantic -g
+$ gdb ./a.out (progam musi byc skompilowany z opcja -g)
+(gdb) [b]reak->b=break main
+(gdb) b plik.c:13
+(gdb)[r]un
+(gdb)[disp]lay i == print i;
+(gdb)[n]ext->do nastepnej lini kodu
+(gdb)[s]tep->nastepna linia (wejdzie do funkcja)
+(gdb)[fin]ish->wychodzi z funkcji
+make file -> automatic variables 
+system kotroli danych
+svn
+git
+codecademy.com//learn/learn-git // 
+git hub
+git lab
+(git)add/commit
+(git)pull/push
+(git)branch/checkout/merge
+(git)log
+(git)stash

@@ -1,0 +1,1 @@
+# Apka do renderowania emaili na róznych mobilkach

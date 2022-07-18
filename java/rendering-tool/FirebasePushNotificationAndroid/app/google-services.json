@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "107927793160",
+    "firebase_url": "https://messagerenderingtool.firebaseio.com",
+    "project_id": "messagerenderingtool",
+    "storage_bucket": "messagerenderingtool.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:107927793160:android:1e134adffa4ccbd4",
+        "android_client_info": {
+          "package_name": "com.example.messagerenderingtool"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "107927793160-ig4egkpd6he27mfcjrj3qi0jc9anuq2q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZpTlWsJJI9JGtHgBfjb_Obztr8aF8Wd0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

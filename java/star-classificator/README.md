@@ -1,0 +1,1 @@
+# Systemy ekspertowe -  klasyfikator gwaizd

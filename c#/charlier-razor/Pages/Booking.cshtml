@@ -1,0 +1,102 @@
+@page "{id:int}"
+@using Microsoft.EntityFrameworkCore.Metadata.Internal
+@using Newtonsoft.Json
+@model CharlieRazor.Pages.Booking
+@Html.AntiForgeryToken()
+
+<div>
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-12 scene">Ekran</div>
+        </div>
+        <div class="row">
+            <table id="seats-table" class="seats mt-5">
+
+                @for (var i = 1; i < 4; i++)
+                {
+                    <tr>
+                        <th>@i</th>
+                        @for (var j = 1; j < 11; j++)
+                        {
+                             @if (Model.BookedTickets.Exists(ticket => ticket.Row == i && ticket.Seat == j))
+                            {
+                                  <td class="taken-seat">@j</td>
+                            }
+                            else if (Model.SelectedTicketsJson != null && 
+                                     Booking.TicketCandidate.FromJson(Model.SelectedTicketsJson)
+                                .Exists(candidate => candidate.row == i && candidate.seat == j))
+                            {
+                                <td class="chosen-seat">
+                                     <form method="post" action="/Booking/@Model.SelectedEvent.Id?handler=RemoveTicket" asp-antiforgery="true" class="not-button-from">
+                                        <button style="height: 100%; width: 100%">@j</button>
+                                        <input type="hidden" name="row" value="@i"/>
+                                        <input type="hidden" name="seat" value="@j"/>
+                                        <input type="hidden" name="eventId" value="@Model.SelectedEvent.Id"/>
+                                    </form>
+                                </td>
+                            }
+                            else
+                            {
+                                <td class="free-seat">
+                                    <form method="post" action="/Booking/@Model.SelectedEvent.Id?handler=AddTicket" asp-antiforgery="true" class="not-button-from">
+                                        <button style="height: 100%; width: 100%">@j</button>
+                                        <input type="hidden" name="row" value="@i"/>
+                                        <input type="hidden" name="seat" value="@j"/>
+                                        <input type="hidden" name="eventId" value="@Model.SelectedEvent.Id"/>
+                                    </form>
+                                </td>
+                            }
+                        }
+                    </tr>
+                }
+            </table>
+        </div>
+        <div class="row align-items-center mt-5" style="background-color: #767eb3; height: 30px; text-align: center">
+            <div class="col text-left">Wybrane bilety:</div>
+        </div>
+        <div class="row text-center mb-3">
+            <div class="col text-left">Rzad: </div>
+            <div class="col text-left">Miejsca: </div>
+            <div class="col text-left">Rezerwacja: </div>
+        </div>
+         @{
+            foreach (var ticketCandidate in Booking.TicketCandidate.FromJson(Model.SelectedTicketsJson))
+            {
+                <div class="row text-center mb-2">
+                    <div class="col text-left"> @ticketCandidate.row </div>
+                    <div class="col text-left"> @ticketCandidate.seat </div>
+                    <div class="col text-left"> Rezerwacja </div>
+                </div>
+            }
+        }
+        <div class="row mb-5 mt-5">
+            <div class="col-6">
+                <div>Legenda miejsc</div>
+                <table class="legend-table seats">
+                    <tr>
+                        <td class="free-seat"> 5 </td>
+                        <th> wolne </th>
+                    </tr>
+                    <tr>
+                        <td class="taken-seat"> 5 </td>
+                        <th> zajete </th>
+                    </tr>
+                    <tr>
+                        <td class="chosen-seat"> 5</td>
+                        <th> wybrane </th>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-6 d-flex flex-column justify-content-end">
+                <form>
+                    <button class="btn-secondary btn w-100 mb-3" asp-page="/Index" type="submit">wróc</button>
+                </form>
+                <form method="post" asp-page-handler="Confirm" asp-antiforgery="true">
+                    <button class="btn-success btn w-100 mb-3" >potwierdz</button>
+                    <input type="hidden" name="eventId" value="@Model.SelectedEvent.Id"/>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

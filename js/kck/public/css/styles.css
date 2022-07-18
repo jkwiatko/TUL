@@ -1,0 +1,57 @@
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: #1f1f1f;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #b3dfff;
+    border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #7bc6ff;
+}
+
+.rand-button {
+    margin-bottom: 16px;
+}
+
+.appContainer {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+.appEvenSubContainer {
+    display: flex;
+    flex-grow: 1;
+}
+
+.silniaLeftPanel{
+    background-color: #7bc6ff;
+}
+
+.silniaRightPanel{
+    background-color: aquamarine;
+    justify-content: space-evenly;
+    flex-flow: column;
+}
+
+.silniaButtonRow {
+    justify-content: space-evenly;
+}
+
+.silniaButton {
+    flex-grow: 1;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

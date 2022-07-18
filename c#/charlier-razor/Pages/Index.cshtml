@@ -1,0 +1,184 @@
+﻿@page
+@using CharlieRazor.Data
+@using CharlieRazor.Models
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h3>@Model.Message</h3>
+
+@if (Model.Kameralna.Any())
+{
+    <h3>@Hall.Kameralna</h3>
+    <table class="table-responsive table">
+        <thead>
+        <tr>
+            <th></th>
+            <th>Production:</th>
+            <th>Name:</th>
+            <th>Description:</th>
+            <th>Duration:</th>
+            <th></th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var e in Model.Kameralna)
+        {
+            <tr>
+                <td>@e.StartDate</td>
+                <td>@e.Film.ProductionInfo</td>
+                <td>@e.Film.Title</td>
+                <td>@e.Film.Description</td>
+                <td>@e.Film.Duration</td>
+@*                  @if (e.Film.Image != null) *@
+@*                  { *@
+@*                      var imgsrc = String.Format("data:image/jpeg;base64,{0}", Convert.ToBase64String(@e.Film.Image));     *@
+@*                      <td> *@
+@*                          <img src="@imgsrc" style="max-width: 100px; max-height: 100px"/> *@
+@*                      </td> *@
+@*                  } *@
+                 <td>
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        <a asp-page="/Booking" asp-route-id="@e.Id">Book tickets</a>
+                    }
+                    else
+                    {
+                        <a asp-area="Identity" asp-page="/Account/Login">Book tickets</a>
+                    }
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+
+@if(@Model.Studyjna.Any())
+{
+    
+    <h3>@Hall.Studyjna</h3>
+    <table class="table-responsive table">
+        <thead>
+        <tr>
+            <th></th>
+            <th>Production:</th>
+            <th>Name:</th>
+            <th>Description:</th>
+            <th>Duration:</th>
+            <th></th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var e in Model.Studyjna)
+        {
+            <tr>
+                <td>@e.StartDate</td>
+                <td>@e.Film.ProductionInfo</td>
+                <td>@e.Film.Title</td>
+                <td>@e.Film.Description</td>
+                <td>@e.Film.Duration</td>
+                               <td>
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        <a asp-page="/Booking" asp-route-id="@e.Id">Book tickets</a>
+                    }
+                    else
+                    {
+                        <a asp-area="Identity" asp-page="/Account/Login">Book tickets</a>
+                    }
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+
+@if (@Model.Klubowa.Any())
+{
+    <h3>@Hall.Klubowa</h3>
+    <table class="table-responsive table">
+        <thead>
+        <tr>
+            <th></th>
+            <th>Production:</th>
+            <th>Name:</th>
+            <th>Description:</th>
+            <th>Duration:</th>
+            <th></th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var e in Model.Klubowa)
+        {
+            <tr>
+                <td>@e.StartDate</td>
+                <td>@e.Film.ProductionInfo</td>
+                <td>@e.Film.Title</td>
+                <td>@e.Film.Description</td>
+                <td>@e.Film.Duration</td>
+                               <td>
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        <a asp-page="/Booking" asp-route-id="@e.Id">Book tickets</a>
+                    }
+                    else
+                    {
+                        <a asp-area="Identity" asp-page="/Account/Login">Book tickets</a>
+                    }
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+
+@if (@Model.Arte.Any())
+{
+    <h3>@Hall.Arte</h3>
+    <table class="table-responsive table">
+        <thead>
+        <tr>
+            <th></th>
+            <th>Production:</th>
+            <th>Name:</th>
+            <th>Description:</th>
+            <th>Duration:</th>
+            <th></th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var e in Model.Arte)
+        {
+            <tr>
+                <td>@e.StartDate</td>
+                <td>@e.Film.ProductionInfo</td>
+                <td>@e.Film.Title</td>
+                <td>@e.Film.Description</td>
+                <td>@e.Film.Duration</td>
+                               <td>
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        <a asp-page="/Booking" asp-route-id="@e.Id">Book tickets</a>
+                    }
+                    else
+                    {
+                        <a asp-area="Identity" asp-page="/Account/Login">Book tickets</a>
+                    }
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+
