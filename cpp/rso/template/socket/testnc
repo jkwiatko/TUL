@@ -1,0 +1,8 @@
+#!/bin/bash
+
+rm -f res 
+for i in `seq 15` 
+do 
+	./nc 
+done 
+tail -f res
